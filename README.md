@@ -17,6 +17,16 @@
 
 (두 인터페이스의 분리는 DIP 원칙의 훌륭한 예다.)
 
+- UserDetailsService 
+  - UserDetails 계약을 이용한다.
+- UserDetails
+  - 하나 이상의 GrantedAuthority을 갖는다.
+- GrantedAuthority
+   - 사용자가 수행할 수 있는 작업을 나타내는 권한
+- UserDetailsManager 
+  - UserDetailsService 계약을 확장
+
+
 ### UserDetails 계약
 ```java
 public interface UserDetails extends Serializable {
